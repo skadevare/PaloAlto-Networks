@@ -23,8 +23,6 @@ key = soup.find('key').text
  
 #Get the config using PA expot config API
 r = requests.get("https://" + panfw + "/api/?type=export&category=configuration&key={}".format(key), verify=False )
-#define pathname
-path = 'c:/fw/python/panos/'
 current_date = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 #define file name
 filename = os.path.join(path, "config" + current_date + ".xml")
